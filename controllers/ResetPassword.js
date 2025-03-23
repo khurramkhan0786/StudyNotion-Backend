@@ -15,7 +15,7 @@ exports.resetPasswordToken = async (req,res) =>{
             message:"Tur Email is not registered with us"
         });
     }
-    //genreate token
+    //generate token
     const token = crypto.randomUUID()
     //update user by adding token and expiration time
     const updatedDetails = await User.findOneAndUpdate(
